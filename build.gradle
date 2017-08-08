@@ -1,0 +1,43 @@
+group 'picks'
+version '1.0-SNAPSHOT'
+
+apply plugin: 'java'
+apply plugin: 'idea'
+
+sourceCompatibility = 1.8
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+
+}
+
+jar {
+    String val = ''
+    configurations.runtime.each {val = val + " libs/"+it.name} //遍历项目的所有依赖的jar包赋值给变量someString
+    manifest {
+        attributes 'Main-Class': 'lunch.Main'
+        attributes 'Class-Path': val
+    }
+}
+//清除上次的编译过的文件
+task clearPj(type:Delete){
+    delete 'build','target'
+}
+task copyJar(type:Copy){
+    from configurations.runtime
+    into ('build/libs/libs')
+}
+task release(type: Copy,dependsOn: [build,copyJar]) {
+    from "build/libs/"
+    into ('C:\\FileServerDirs\\O2O')
+}
+
+

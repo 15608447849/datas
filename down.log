@@ -1,0 +1,298 @@
+FTC_LOG [2017-08-08 10:46:43:4643]  TCP SERVER LISTEN : /172.16.0.200:65000
+FTC_LOG [2017-08-08 10:58:50:5850]  关闭: m.tcps.s.ClientConnect@1e60c053 sun.nio.ch.WindowsAsynchronousSocketChannelImpl[closed]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427103979705 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066493.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427262784710 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066494.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427264337976 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066501.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427265178038 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068981.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427266132122 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068980.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427267388251 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068992.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427268732351 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071485.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427270080982 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071478.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427271019208 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071476.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427271873618 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050484.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427272796365 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050478.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427273592631 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050483.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427274396448 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047977.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427275236133 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047978.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427276017674 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013484.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427276748622 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013485.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427278372869 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000014977.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427279316004 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019476.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427280180607 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019478.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427280942138 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026981.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427281719903 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005602.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427282618109 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005603.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427283703206 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026982.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427284661443 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067007.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427285696702 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067002.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427286695715 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067018.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427287660749 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005805.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427288526485 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005806.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427289331434 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005804.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427290136762 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005808.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427290889231 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005834.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427291633772 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066982.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427292379822 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066983.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427293142863 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066981.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427293837944 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066979.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427294598720 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066980.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427295380638 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066977.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427295723082 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005802.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427296050423 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005803.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427296373611 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005801.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427296682452 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066997.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427296979211 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067015.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427297305042 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066996.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427297620679 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003914.JPG]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427297922724 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003915.JPG]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427298220238 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026978.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427298514354 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077476.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427298858308 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077482.jpg]
+FTC_LOG [2017-08-08 10:59:06:596]   下载添加:92427299175455 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077488.jpg]
+FTC_LOG [2017-08-08 10:59:07:597]  下载队列 移除 任务: [92427103979705 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066493.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:07:597]  下载队列 移除 任务: [92427262784710 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066494.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:08:598]  下载队列 移除 任务: [92427264337976 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066501.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:08:598]  下载队列 移除 任务: [92427265178038 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:09:599]  下载队列 移除 任务: [92427266132122 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068980.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:09:599]  下载队列 移除 任务: [92427267388251 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068992.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:09:599]  下载队列 移除 任务: [92427268732351 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071485.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:10:5910]  下载队列 移除 任务: [92427270080982 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:10:5910]  下载队列 移除 任务: [92427271019208 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:11:5911]  下载队列 移除 任务: [92427271873618 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050484.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:11:5911]  下载队列 移除 任务: [92427272796365 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:12:5912]  下载队列 移除 任务: [92427273592631 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050483.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:12:5912]  下载队列 移除 任务: [92427274396448 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:12:5912]  下载队列 移除 任务: [92427275236133 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047978.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:13:5913]  下载队列 移除 任务: [92427276017674 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013484.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:13:5913]  下载队列 移除 任务: [92427276748622 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013485.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:14:5914]  下载队列 移除 任务: [92427278372869 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000014977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:14:5914]  下载队列 移除 任务: [92427279316004 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:15:5915]  下载队列 移除 任务: [92427280180607 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:15:5915]  下载队列 移除 任务: [92427280942138 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:15:5915]  下载队列 移除 任务: [92427281719903 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005602.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:16:5916]  下载队列 移除 任务: [92427282618109 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005603.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:16:5916]  下载队列 移除 任务: [92427283703206 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026982.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:17:5917]  下载队列 移除 任务: [92427284661443 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067007.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:17:5917]  下载队列 移除 任务: [92427285696702 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067002.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:18:5918]  下载队列 移除 任务: [92427286695715 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067018.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:18:5918]  下载队列 移除 任务: [92427287660749 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005805.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:19:5919]  下载队列 移除 任务: [92427288526485 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005806.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:19:5919]  下载队列 移除 任务: [92427289331434 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005804.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:19:5919]  下载队列 移除 任务: [92427290136762 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005808.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:20:5920]  下载队列 移除 任务: [92427290889231 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005834.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:20:5920]  下载队列 移除 任务: [92427291633772 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066982.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:21:5921]  下载队列 移除 任务: [92427292379822 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066983.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:21:5921]  下载队列 移除 任务: [92427293142863 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:22:5922]  下载队列 移除 任务: [92427293837944 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066979.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:22:5922]  下载队列 移除 任务: [92427294598720 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066980.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:22:5922]  下载队列 移除 任务: [92427295380638 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:23:5923]  下载队列 移除 任务: [92427295723082 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005802.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:23:5923]  下载队列 移除 任务: [92427296050423 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005803.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:24:5924]  下载队列 移除 任务: [92427296373611 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005801.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:24:5924]  下载队列 移除 任务: [92427296682452 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066997.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:24:5924]  下载队列 移除 任务: [92427296979211 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067015.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:25:5925]  下载队列 移除 任务: [92427297305042 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066996.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:25:5925]  下载队列 移除 任务: [92427297620679 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003914.JPG] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:26:5926]  下载队列 移除 任务: [92427297922724 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003915.JPG] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:26:5926]  下载队列 移除 任务: [92427298220238 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026978.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:27:5927]  下载队列 移除 任务: [92427298514354 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:27:5927]  下载队列 移除 任务: [92427298858308 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077482.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 10:59:28:5928]  下载队列 移除 任务: [92427299175455 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077488.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:11:111]  关闭: m.tcps.s.ClientConnect@11f40977 sun.nio.ch.WindowsAsynchronousSocketChannelImpl[closed]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556596998504 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL1715.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556747779686 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL273.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748116467 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL364.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748293540 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL1001.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748470237 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFYX1703.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748615218 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFYX1704.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748838354 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/HSCS91.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556748996172 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/LT0801.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749132470 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/LT7D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749268390 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/QQWJ01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749403555 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL180D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749536455 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL240D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749669355 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL240D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749799612 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL40D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556749934022 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL40D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556750077870 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL60D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556750209638 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL182.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556750341027 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL35.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556750485631 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL63.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556750617398 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL91.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751000995 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1300.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751162967 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FD.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751294356 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FC.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751431787 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FB.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751593758 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1302.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751731189 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1306.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556751895426 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL60D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752043428 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL63.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752180858 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL90D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752329615 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL90D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752466290 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL98.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752601455 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL120D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752738886 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL126.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556752883490 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL147.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753070380 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL189.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753280679 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL273.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753451712 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL350.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753642378 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL360D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753785471 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL360D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556753955749 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/WY1001.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556754107527 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/WY1002.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556754260815 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZH1730.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556754424296 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL77.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556754593819 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL42.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556754832057 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/QQWJ28.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556755004978 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL120D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556755157510 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL150D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556755332696 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL150D02.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]   下载添加:92556755507505 [https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL180D01.pdf]
+FTC_LOG [2017-08-08 11:01:16:116]  下载队列 移除 任务: [92556596998504 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL1715.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:17:117]  下载队列 移除 任务: [92556747779686 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL273.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557914462399 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066493.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557915185042 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066494.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557915371554 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066501.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557915544853 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068981.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557915764213 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068980.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557915912215 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068992.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916070411 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071485.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916204821 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071478.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916342251 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071476.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916467600 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050484.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916597857 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050478.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916729624 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050483.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557916859125 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047977.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917012413 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047978.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917141537 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013484.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917317478 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013485.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917442450 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000014977.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917565155 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019476.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917688616 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019478.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917813587 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026981.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557917935915 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005602.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557918289308 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005603.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557918435045 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026982.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557918576251 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067007.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557918699334 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067002.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557918838652 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067018.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919132391 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005805.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919310220 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005806.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919451426 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005804.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919588478 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005808.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919737991 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005834.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557919864850 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066982.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920009454 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066983.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920132537 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066981.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920253732 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066979.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920380214 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066980.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920501032 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066977.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920665646 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005802.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920795525 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005803.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557920914833 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005801.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921059815 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066997.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921190449 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067015.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921319951 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066996.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921437371 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003914.JPG]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921589526 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003915.JPG]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921720538 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026978.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557921850040 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077476.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557922006725 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077482.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]   下载添加:92557922145288 [https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077488.jpg]
+FTC_LOG [2017-08-08 11:01:17:117]  下载队列 移除 任务: [92556748116467 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL364.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:18:118]  下载队列 移除 任务: [92556748293540 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL1001.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:19:119]  下载队列 移除 任务: [92556748470237 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFYX1703.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:19:119]  下载队列 移除 任务: [92556748615218 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFYX1704.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:20:120]  下载队列 移除 任务: [92556748838354 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/HSCS91.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:20:120]  下载队列 移除 任务: [92556748996172 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/LT0801.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:21:121]  下载队列 移除 任务: [92556749132470 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/LT7D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:21:121]  下载队列 移除 任务: [92556749268390 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/QQWJ01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:22:122]  下载队列 移除 任务: [92556749403555 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL180D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:22:122]  下载队列 移除 任务: [92556749536455 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL240D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:22:122]  下载队列 移除 任务: [92556749669355 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL240D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:23:123]  下载队列 移除 任务: [92556749799612 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL40D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:23:123]  下载队列 移除 任务: [92556749934022 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL40D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:24:124]  下载队列 移除 任务: [92556750077870 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL60D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:24:124]  下载队列 移除 任务: [92556750209638 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL182.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:25:125]  下载队列 移除 任务: [92556750341027 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL35.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:26:126]  下载队列 移除 任务: [92556750485631 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL63.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:26:126]  下载队列 移除 任务: [92556750617398 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/BBWL91.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:27:127]  下载队列 移除 任务: [92556751000995 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1300.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:27:127]  下载队列 移除 任务: [92556751162967 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FD.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:28:128]  下载队列 移除 任务: [92556751294356 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FC.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:28:128]  下载队列 移除 任务: [92556751431787 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZP17FB.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:29:129]  下载队列 移除 任务: [92556751593758 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1302.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:29:129]  下载队列 移除 任务: [92556751731189 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/PBZO1306.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:30:130]  下载队列 移除 任务: [92556751895426 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL60D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:30:130]  下载队列 移除 任务: [92556752043428 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL63.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:31:131]  下载队列 移除 任务: [92556752180858 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL90D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:31:131]  下载队列 移除 任务: [92556752329615 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL90D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:32:132]  下载队列 移除 任务: [92556752466290 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL98.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:32:132]  下载队列 移除 任务: [92556752601455 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL120D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:33:133]  下载队列 移除 任务: [92556752738886 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL126.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:33:133]  下载队列 移除 任务: [92556752883490 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL147.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:34:134]  下载队列 移除 任务: [92556753070380 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL189.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:34:134]  下载队列 移除 任务: [92556753280679 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL273.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:35:135]  下载队列 移除 任务: [92556753451712 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL350.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:35:135]  下载队列 移除 任务: [92556753642378 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL360D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:36:136]  下载队列 移除 任务: [92556753785471 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL360D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:36:136]  下载队列 移除 任务: [92556753955749 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/WY1001.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:37:137]  下载队列 移除 任务: [92556754107527 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/WY1002.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:37:137]  下载队列 移除 任务: [92556754260815 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZH1730.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:38:138]  下载队列 移除 任务: [92556754424296 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/AXTL77.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:38:138]  下载队列 移除 任务: [92556754593819 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/CFWL42.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:39:139]  下载队列 移除 任务: [92556754832057 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/QQWJ28.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:39:139]  下载队列 移除 任务: [92556755004978 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL120D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:40:140]  下载队列 移除 任务: [92556755157510 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL150D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:41:141]  下载队列 移除 任务: [92556755332696 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL150D02.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:41:141]  下载队列 移除 任务: [92556755507505 # https://image.mybank.icbc.com.cn/picture/Perfinancingproduct/ZL180D01.pdf] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:41:141]  下载队列 移除 任务: [92557914462399 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066493.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:42:142]  下载队列 移除 任务: [92557915185042 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066494.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:42:142]  下载队列 移除 任务: [92557915371554 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066501.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:43:143]  下载队列 移除 任务: [92557915544853 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:43:143]  下载队列 移除 任务: [92557915764213 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068980.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:44:144]  下载队列 移除 任务: [92557915912215 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000068992.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:44:144]  下载队列 移除 任务: [92557916070411 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071485.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:45:145]  下载队列 移除 任务: [92557916204821 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:45:145]  下载队列 移除 任务: [92557916342251 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000071476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:46:146]  下载队列 移除 任务: [92557916467600 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050484.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:46:146]  下载队列 移除 任务: [92557916597857 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:46:146]  下载队列 移除 任务: [92557916729624 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000050483.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:47:147]  下载队列 移除 任务: [92557916859125 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:47:147]  下载队列 移除 任务: [92557917012413 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000047978.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:48:148]  下载队列 移除 任务: [92557917141537 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013484.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:48:148]  下载队列 移除 任务: [92557917317478 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000013485.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:49:149]  下载队列 移除 任务: [92557917442450 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000014977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:50:150]  下载队列 移除 任务: [92557917565155 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:50:150]  下载队列 移除 任务: [92557917688616 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000019478.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:50:150]  下载队列 移除 任务: [92557917813587 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:51:151]  下载队列 移除 任务: [92557917935915 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005602.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:51:151]  下载队列 移除 任务: [92557918289308 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005603.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:52:152]  下载队列 移除 任务: [92557918435045 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026982.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:52:152]  下载队列 移除 任务: [92557918576251 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067007.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:53:153]  下载队列 移除 任务: [92557918699334 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067002.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:53:153]  下载队列 移除 任务: [92557918838652 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067018.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:54:154]  下载队列 移除 任务: [92557919132391 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005805.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:54:154]  下载队列 移除 任务: [92557919310220 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005806.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:54:154]  下载队列 移除 任务: [92557919451426 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005804.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:55:155]  下载队列 移除 任务: [92557919588478 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005808.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:55:155]  下载队列 移除 任务: [92557919737991 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005834.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:56:156]  下载队列 移除 任务: [92557919864850 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066982.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:56:156]  下载队列 移除 任务: [92557920009454 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066983.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:57:157]  下载队列 移除 任务: [92557920132537 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066981.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:57:157]  下载队列 移除 任务: [92557920253732 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066979.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:58:158]  下载队列 移除 任务: [92557920380214 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066980.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:58:158]  下载队列 移除 任务: [92557920501032 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066977.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:58:158]  下载队列 移除 任务: [92557920665646 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005802.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:01:59:159]  下载队列 移除 任务: [92557920795525 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005803.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:00:20]  下载队列 移除 任务: [92557920914833 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000005801.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:00:20]  下载队列 移除 任务: [92557921059815 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066997.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:00:20]  下载队列 移除 任务: [92557921190449 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000067015.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:01:21]  下载队列 移除 任务: [92557921319951 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000066996.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:01:21]  下载队列 移除 任务: [92557921437371 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003914.JPG] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:02:22]  下载队列 移除 任务: [92557921589526 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000003915.JPG] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:02:22]  下载队列 移除 任务: [92557921720538 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000026978.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:03:23]  下载队列 移除 任务: [92557921850040 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077476.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:03:23]  下载队列 移除 任务: [92557922006725 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077482.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:02:04:24]  下载队列 移除 任务: [92557922145288 # https://image.mybank.icbc.com.cn//picture/creditCard/cardPicture/C000077488.jpg] ,当前下载中 任务数: 0
+FTC_LOG [2017-08-08 11:07:04:74]  关闭: m.tcps.s.ClientConnect@18b7f9 sun.nio.ch.WindowsAsynchronousSocketChannelImpl[closed]
