@@ -1,9 +1,13 @@
 package lunch;
 
 import com.winone.ftc.mtools.FileUtil;
+import com.winone.ftc.mtools.StringUtil;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
@@ -11,8 +15,9 @@ import java.util.regex.Pattern;
  * Created by user on 2017/8/7.
  */
 public class Param {
+
     public static String HOME = ".";
-    public static String PATH ="/winoneO2O";
+    public static String PATH ="/o2o";
     public static void setHome(String home) throws IOException {
         File file = new File(home);
         if (!file.exists()){
@@ -40,4 +45,8 @@ public class Param {
         }
         return dest;
     }
+
+
+
+
 }

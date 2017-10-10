@@ -1,46 +1,65 @@
 package lunch;
 
+import abchina.Abchina;
+import ccb.Ccb;
 import com.google.gson.Gson;
 import com.winone.ftc.mcore.imps.ManagerImp;
-import com.winone.ftc.mentity.mbean.ManagerParams;
-import com.winone.ftc.mtools.ClazzUtil;
+import com.winone.ftc.mentity.mbean.entity.ManagerParams;
 import com.winone.ftc.mtools.FileUtil;
-import interaction.GoodsDataAllRecode;
+import icbc.Icbc;
+import icbc.interaction.GoodsDataAllRecode;
 import interfaces.*;
-import m.tcps.p.CommunicationAction;
-import m.tcps.p.Op;
-import m.tcps.p.Session;
 
 import java.io.File;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Date;
 import java.util.List;
 
 /**
  * Created by user on 2017/8/7.
  */
-public class LunchThread extends BaseThread implements ActionCall{
-    private final long INTERVAL_TIME;
-    private final ArrayList<String> lunchList;
-    private final SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");//24小时制
-    private volatile boolean isCatchAllData;
+public class LunchThread extends Thread implements ActionCall{
+    private int intervalTime = 0;
+    private List<String> lunchList;
     private int nextStart = 0;
-    private final List<String> goodsList = new ArrayList<>();//GOODS LIST
-    public LunchThread(ArrayList<String> list,long interval,int threadNumber) {
-        super(null,null);
-        this.lunchList = list;
-        this.INTERVAL_TIME = interval;
+    private final String jsonFile ="./pick.json";
 
-        initDownParam(threadNumber);
-
-        Say.I("设置同时下载存储最大数: "+ threadNumber);
-        if (interval==-2){
-            Say.I("启动数据爬虫,不自动抓取,不结束进程.");
-            return;
-        }
+    public LunchThread() {
+        ConfigBean configBean = init();//初始化定时器
+        initDownParam(configBean.getDownloadMaxThread());
+        initLaunceList(configBean.getFirstBack(),configBean.getHome(),configBean.getDirectory());//判断类型,设置主目录 路径
+        intervalTime = configBean.getExecuteType();
         start();
     }
+
+    private void initLaunceList(String firstBack,String home,String dirs) {
+        ParamManagerAdapter adpter = getBackType(firstBack);
+        if (adpter==null){
+            Say.I("不匹配的参数类型: firstBack ,不识别的银行类型.请修改后重新尝试.");
+            System.exit(0);
+        }else{
+            adpter.setHomeFile(home);
+            adpter.setDirs(dirs);
+            lunchList = adpter.getStartItemList();
+            Say.I("当前抓取的银行: "+adpter+"\n抓取数据存储主目录: "+ home +"\n可抓取类别:\n"+lunchList);
+        }
+
+
+    }
+
+    private ParamManagerAdapter getBackType(String firstBack) {
+        if (firstBack.equals("icbc")){
+            return Icbc.getInstance();
+        }else
+        if (firstBack.equals("ccb")){
+            return Ccb.getInstance();
+        }else
+        if (firstBack.equals("abchina")){
+            return Abchina.getInstance();
+        }
+        return null;
+    }
+
+
+    //初始化 下载器
     private void initDownParam(int threadNumber) {
         if (threadNumber<=1) threadNumber = 1;
         ManagerParams params = new ManagerParams();
@@ -48,72 +67,93 @@ public class LunchThread extends BaseThread implements ActionCall{
         params.setCheckNetwork(false);
         params.setRecode(false);
         params.setRuntimeThreadMax(threadNumber);
-        params.setTcpServerOpen(true);
-        params.setComunicationAction(new NotifyServer());
         ManagerImp.get().initial(params);
     }
 
-    @Override
-    protected void workImps() throws Exception {
-        if (INTERVAL_TIME<0){
-            if (INTERVAL_TIME==-1){
-                Say.I("不循环抓取,数据抓取完毕结束进程.");
-            }else if (INTERVAL_TIME ==-3){
-                Say.I("不循环抓取,执行首次抓取数据.");
+    /**
+     * 初始化配置文件
+     * @return
+     */
+    private ConfigBean init() {
+        ConfigBean configBean = null;
+        try {
+            File file = new File(jsonFile);
+            if (file.exists() && file.isFile()){
+                String content = FileUtil.getFileText(file.getCanonicalPath(),false);
+                Gson gson = new Gson();
+                configBean = gson.fromJson(content,ConfigBean.class);
+                if (configBean.getExecuteType()!=0){
+                    TimeBean timeBean = gson.fromJson(content, TimeBean.class);
+                    if (timeBean.check()){
+                        TimeThreadFactory.create(timeBean);
+                    }
+                }
             }
-
-        }else{
-            Say.I("系统在 "+ simpleDateFormat.format(new Date(System.currentTimeMillis()+INTERVAL_TIME)) +"后,自动抓取数据.");
-            Thread.sleep(INTERVAL_TIME);
+        } catch (Exception e) {
+            e.printStackTrace();
         }
-        lunch();
+        return configBean!=null? configBean: new ConfigBean();
     }
+    @Override
+    public void run() {
+        Say.I("启动数据爬虫");
+            if (intervalTime == 0){
+                Say.I("数据抓取成功将结束进程.");
+                lunch();
+            }else if (intervalTime == 1){
+                Say.I("不自动抓取,不结束进程");
+            }else if (intervalTime == 2){
+                Say.I("执行首次数据抓取并保持存活.");
+                lunch();
+            }else{
+                exit(1);
+            }
+    }
+
+    //启动
     private void lunch() {
-        isCatchAllData = true;
+        if (lunchList==null || lunchList.size()==0) {
+           Say.I("无抓取子项,跳过自动抓取.");
+           exit(intervalTime);
+           return;
+        }
         nextStart = 0 ;
+        specialStart();
         for (String clazz : lunchList){
-            ClazzUtil.newInstance(clazz,new Class[]{ActionCall.class},new Object[]{this});
-            waitTime(500);
+            BaseThreadManager.getInstants().launchThread(clazz,this);
         }
     }
-
-
-
-
-
-
-
+   private void exit(int val){
+        if (val==0){
+            Say.I("退出.");
+            System.exit(0);
+        }
+    }
     @Override
     public void error(Exception e) {
         e.printStackTrace();
     }
-
     @Override
     public void onComplete(CatchBean catchBean) {
-        Say.I("抓取成功: "+ catchBean.getName());
+        specialPut(catchBean);
+        //通知服务器
+        NotifyServer.get().notify(catchBean);
         if (lunchList.contains(catchBean.getName())) {
             nextStart++;
         }
         if (nextStart == lunchList.size()){
-            isCatchAllData = false;
-            GoodsDataAllRecode.get().recode();
-            Say.I("全部数据已抓取完毕.");
-            if (INTERVAL_TIME<0){
-                try {
-                    Thread.sleep(1000 * 10);
-                } catch (InterruptedException e) {
-                    e.printStackTrace();
-                }finally {
-                    if (INTERVAL_TIME == -1){
-                        System.exit(0);
-                    }else if (INTERVAL_TIME==-3){
-                        return;
-                    }
-                }
-            }else{
-                work();
-            }
+            exit(intervalTime);
+            specialNotify();
         }
-
     }
+    private void specialStart(){
+        GoodsDataAllRecode.get().clear(); //工商银行,六个商品的json组合
+    }
+    private void specialPut(CatchBean catchBean){
+        GoodsDataAllRecode.get().recode(catchBean.getName()); //工商银行,六个商品的json组合(互动茶几)
+    }
+    private void specialNotify(){
+        NotifyServer.get().notify(GoodsDataAllRecode.get().buildCatch());
+    }
+
 }

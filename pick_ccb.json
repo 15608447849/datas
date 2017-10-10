@@ -1,0 +1,42 @@
+
+/**
+config
+      home 资源主目录
+      directory 主文件夹
+      executeType 执行类型
+        0 数据抓取成功将结束进程.(定时任务不会被执行,且不会通知服务器)
+        1 不自动抓取,不结束进程
+        2 执行首次数据抓取并保持存活
+      downloadMaxThread 下载线程最大并发数
+      firstBack 抓取的银行(icbc 工商银行)
+notify_server 抓取数据后通知服务器地址
+       host   IP地址
+       port   端口号
+       notyfy 是否通知
+determinated_time  定时抓取的任务 请勿随意修改 key, value 是每天抓取的时间点
+special_time  定时抓取的特殊任务 请勿随意修改 key, value 是每天抓取的时间点
+interval_time  间隔抓取的任务 请勿随意修改 key, value 间隔时间.
+*/
+
+{
+  "config":{
+    "home":"C:/DATAPICK",
+    "executeType":"2",
+    "downloadMaxThread":"4",
+    "firstBack":"ccb"
+  },
+  "notify_server":{
+    "host":"172.16.1.24",
+    "port":"65000",
+    "notify":"true"
+  },
+  "determinated_time":{
+    "ccb.interaction.Interactions":"07:00:00",
+    "ccb.seckillsOrGroups.SeckillsOrGroups":"07:00:00#12:00:00",
+    "ccb.buyAllshop.BuyAllShop":"07:00:00#12:00:00"
+  },
+  "interval_time":{
+    "ccb.foreignExchange.ForeignExchange":"60",
+    "ccb.accountGold.AccountGold":"180"
+  }
+}

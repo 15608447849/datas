@@ -46,23 +46,24 @@ public class MUrl {
     public String getFileName() {
         return fileName;
     }
-
     public HashMap<String, String> getMap() {
         return map;
     }
-
-
-
     public boolean isSave(MUrl other){
-        return this.url.equals(other.getUrl()) && this.path.equals(path) && this.fileName.equals(fileName);
+        return this.url.equals(other.getUrl()) && this.path.equals(other.getPath()) && this.fileName.equals(other.getFileName());
     }
-
-    public boolean isUrlSave(String url){
-        return this.url.equals(url);
-    }
-
     public void setPathHome(String pathHome) {
         this.path = pathHome+this.path;
+    }
+
+    @Override
+    public String toString() {
+        return "MUrl{" +
+                "url='" + url + '\'' +
+                ", path='" + path + '\'' +
+                ", fileName='" + fileName + '\'' +
+                ", map=" + map +
+                '}';
     }
 }
 

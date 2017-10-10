@@ -1,7 +1,7 @@
 package interfaces;
 
-import com.winone.ftc.mentity.mbean.State;
-import com.winone.ftc.mentity.mbean.Task;
+import com.winone.ftc.mentity.mbean.entity.State;
+import com.winone.ftc.mentity.mbean.entity.Task;
 import com.winone.ftc.mtools.FileUtil;
 import com.winone.ftc.mtools.TaskUtils;
 import lunch.Say;
@@ -16,10 +16,10 @@ public class DownloadMonitor extends Task.onResultAdapter {
     private ArrayList<MUrl> list = new ArrayList<>(); //总下载数
     private ArrayList<Task> cIndexList = new ArrayList<>();// 已完成数
     private MonitorAction action;
-    private DownloadSwing downloadSwing;
-
-    public DownloadMonitor(MonitorAction action) {
+    private ParamManager paramManager;
+    public DownloadMonitor(MonitorAction action,ParamManager paramManager) {
         this.action = action;
+        this.paramManager = paramManager;
     }
 
 
@@ -29,26 +29,23 @@ public class DownloadMonitor extends Task.onResultAdapter {
     public Iterator<MUrl> iterator(){
         return list.iterator();
     }
-    public void add(MUrl url){
+    public synchronized void add(MUrl url){
         Iterator<MUrl> iterator = list.iterator();
+        MUrl curl;
         while (iterator.hasNext()){
-            if (iterator.next().isSave(url)) break;
+            curl = iterator.next();
+            if (curl.isSave(url)) return;
         }
         list.add(url);
     }
     public void reset(){
         cIndexList.clear();
-        if (downloadSwing!=null){
-            downloadSwing.close();
-        }
-        downloadSwing = new DownloadSwing(action.getKey(),list.size());
+        DownloadSwing.get().show();
     }
     public void clear(){
         cIndexList.clear();
         list.clear();
-        if (downloadSwing!=null){
-            downloadSwing = null;
-        }
+        DownloadSwing.get().hide();
     }
     @Override
     public void onSuccess(State state) {
@@ -64,12 +61,11 @@ public class DownloadMonitor extends Task.onResultAdapter {
     }
 
     private synchronized void remove(State state) {
-        addComplete(state.getTask());
-        if (downloadSwing!=null){
-            downloadSwing.setCurrent(cIndexList.size());
-        }
+        cIndexList.add(state.getTask());
+        DownloadSwing.get().setCurrentInfo(cIndexList.size(),list.size(),paramManager.getKeyTitle(action.getKey()));
         if (remaining()==0){
             if (action!=null){
+                //传递已下载的文件的地址
                 ArrayList<String> fileLocalPath = new ArrayList<>();
                 for (Task task :cIndexList){
                     fileLocalPath.add(TaskUtils.getLocalFile(task));
@@ -80,13 +76,7 @@ public class DownloadMonitor extends Task.onResultAdapter {
         }
     }
 
-    private void addComplete(Task task) {
-        Iterator<Task> iterator = cIndexList.iterator();
-        while (iterator.hasNext()){
-            if (iterator.next().equals(task)) return;
-        }
-        cIndexList.add(task);
-    }
+
 
 
 }
