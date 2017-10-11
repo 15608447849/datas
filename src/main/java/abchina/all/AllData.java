@@ -2,6 +2,8 @@ package abchina.all;
 
 import abchina.AbcBTA;
 import abchina.all.interaction.Pre.PreciousMetal_1;
+import abchina.all.interaction.insur.Insurance;
+import abchina.all.interaction.insur.obj.SourceData;
 import abchina.all.obj.JsObject;
 import interfaces.ActionCall;
 
@@ -26,8 +28,8 @@ public class AllData extends AbcBTA {
     @Override
     protected void workImps() throws Exception {
         jsObject.clearAll();
-        new PreciousMetal_1(this);
-
+//        new Insurance(this);
+//        new PreciousMetal_1(this);
 
         transInteractionGoods(jsObject,"data","JSON");
 
@@ -37,4 +39,9 @@ public class AllData extends AbcBTA {
     public String getGoodsImageUrl(String url, String path) {
         return super.getGoodsImageUrl(url, path, k, v);
     }
+
+    public <T> T urlTranslateJsonObject(String urlFormat,int page, int number,Class<T> clazz) throws Exception {
+        return jTextToJson( getHttpResponse(String.format(urlFormat,page,number),null,true).body(),clazz);
+    }
+
 }
