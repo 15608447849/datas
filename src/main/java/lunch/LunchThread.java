@@ -39,7 +39,8 @@ public class LunchThread extends Thread implements ActionCall{
             adpter.setHomeFile(home);
             adpter.setDirs(dirs);
             lunchList = adpter.getStartItemList();
-            Say.I("当前抓取的银行: "+adpter+"\n抓取数据存储主目录: "+ home +"\n可抓取类别:\n"+lunchList);
+
+            //Say.I("当前抓取的银行: "+adpter+"\n抓取数据存储主目录: "+ home +"\n可抓取类别:\n"+lunchList);
         }
 
 

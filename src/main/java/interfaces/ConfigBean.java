@@ -1,5 +1,7 @@
 package interfaces;
 
+import lunch.Say;
+
 import javax.swing.plaf.nimbus.State;
 import java.util.HashMap;
 
@@ -43,7 +45,6 @@ public class ConfigBean {
             val = val.replace("\\","/");
             if (val.endsWith("/")) val = val.substring(0,val.lastIndexOf("/"));
         }
-
         return val;
     }
     /**

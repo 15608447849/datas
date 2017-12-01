@@ -74,7 +74,7 @@ public class BaseThreadByTimerBean extends TimerTask implements ActionCall{
         startDT.add(Calendar.DAY_OF_MONTH, num);
         return startDT.getTime();
     }
-    private Date string2Date(String timeString) {
+    private Date string2Date(String timeString) {// 11:00:00
         String[] strArr = timeString.split(":");
 
         Calendar calendar = Calendar.getInstance();

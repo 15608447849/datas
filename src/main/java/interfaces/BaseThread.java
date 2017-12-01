@@ -13,6 +13,7 @@ import org.apache.tools.ant.types.FileSet;
 
 import java.io.File;
 import java.io.IOException;
+import java.net.SocketTimeoutException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
@@ -105,21 +106,25 @@ public abstract class BaseThread extends Thread implements MonitorAction {
      * 超时
      */
     protected boolean waitTime() {
-        if (reMackCount > 25) {
+        if (reMackCount > 15) {
 //            Say.I(KEY+ " 抓取数据超时, 尝试重试次数已超过最大值,即将结束数据抓取.");
             stopSelf();
             return false;
-        } else if (reMackCount > 7) {
-            waitTimeByTryAng(1000 * 30);
-        } else if (reMackCount < 3) {
-            waitTimeByTryAng(1000 * 10);
+        } else if (reMackCount > 12) {
+            waitTimeByTryAng(1000 * getRandomNumber(30,60));
+        } else if (reMackCount < 6) {
+            waitTimeByTryAng(1000 * getRandomNumber(10,15));
         } else {
-            waitTimeByTryAng(1000 * 15);
+            waitTimeByTryAng(1000 * getRandomNumber(15,30));
         }
         reMackCount++;
         return true;
     }
 
+    private int getRandomNumber(int min ,int max){
+            Random random = new Random();
+            return random.nextInt(max)%(max-min+1) + min;
+    }
 
     @Override
     public void run() {
@@ -258,7 +263,11 @@ public abstract class BaseThread extends Thread implements MonitorAction {
             work2Imps();
             work3Imps();
         } catch (Exception e) {
-            error(e);
+            if (e instanceof SocketTimeoutException){
+               Say.I("超时 -  task: [" + paramManager.getKeyTitle(KEY) +"]");
+            }else{
+                error(e);
+            }
             if (waitTime()){
                 work();
             }
@@ -271,7 +280,7 @@ public abstract class BaseThread extends Thread implements MonitorAction {
      */
     protected void init() {
         //记录启动时间  (当启动时间距离当前时间>2小时(60 * 60 * 2 * 1000),会被回收 )
-        Say.I("real start Thread: ["+this.getName() +"]  Task: [" + paramManager.getKeyTitle(KEY) +"]  ,execute thread number: "+ Thread.activeCount());
+        Say.I("task: [" + paramManager.getKeyTitle(KEY) +"]  ,thread: ["+this.getName() +"]  ,thread number: ["+ Thread.activeCount()+"]");
         sTime = System.currentTimeMillis();
         monitor.clear();
         clearTextBean();

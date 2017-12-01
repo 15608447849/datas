@@ -136,16 +136,10 @@ public class NormalGood extends BaseThread{
     private void setGoodsContent(Goods goods, String val) {
         try {
             if (goods==null) return;
+            String goodsId = val.substring(val.indexOf("_")+1);
+            goodsId = goodsId.substring(0,goodsId.indexOf("."));
+            goods.setGoods_id(goodsId);
             Document doc = Jsoup.connect(val).timeout(TIMEOUT).get();
-            try {
-                if(doc.select("#content .prop li").first().attr("id").equals("promotionMes"))
-                    goods.setGoods_id(doc.select("#content .prop li").get(1).text().substring(5));
-                else
-                    goods.setGoods_id(doc.select("#content .prop li").first().text().substring(5));
-            } catch (NullPointerException e) {
-                return;
-            }
-
             goods.setTitle(doc.select("#currProductName_js").attr("value"));
             goods.setDesc(doc.select("p.p_red").first().text());
             //Say.I(doc.select("#storeName_js").attr("value"));

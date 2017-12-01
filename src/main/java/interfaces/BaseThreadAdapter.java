@@ -2,10 +2,12 @@ package interfaces;
 
 import ccb.interaction.obj.precious.PmJson;
 import com.google.gson.Gson;
+import lunch.Say;
 import org.jsoup.Connection;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 
+import java.io.IOException;
 import java.io.StringReader;
 import java.net.SocketTimeoutException;
 import java.text.ParseException;
@@ -44,7 +46,6 @@ public abstract class BaseThreadAdapter extends BaseThread{
     //根据 URL  获取 docments 对象, 并存储在 map中.
     private Document connectUrlAndStorage(String url,String type,HashMap<String,String> header,HashMap<String,String> params) throws Exception{
         Document doc = null;
-
         Connection con = Jsoup.connect(url);
         setConnectHeader(con,header);
         if (params!=null && !params.isEmpty()){
@@ -80,7 +81,7 @@ public abstract class BaseThreadAdapter extends BaseThread{
         return str.trim();
     }
 
-    private void setConnectHeader(Connection connection,HashMap<String,String> header){
+    private void setConnectHeader(Connection connection,Map<String,String> header){
         if (header!=null && !header.isEmpty()){
             Iterator<Map.Entry<String,String>> iterator = header.entrySet().iterator();
             Map.Entry<String,String> entry;
@@ -88,6 +89,7 @@ public abstract class BaseThreadAdapter extends BaseThread{
                 entry = iterator.next();
                 connection = connection.header(entry.getKey(),entry.getValue());
             }
+
         }
     }
 
@@ -101,16 +103,12 @@ public abstract class BaseThreadAdapter extends BaseThread{
             return getTextByUrl(url);
         }
     }
-    public Connection.Response getHttpResponse(String url, HashMap<String, String> header,boolean isIgnoreContentType) throws Exception{
-        try{
+    public Connection.Response getHttpResponse(String url, Map<String, String> header,boolean isIgnoreContentType) throws Exception{
             Connection connection = Jsoup.connect(url);
             connection = connection.timeout(TIMEOUT);
             setConnectHeader(connection,header);
             connection.ignoreContentType(isIgnoreContentType);
             return connection.execute();
-        }catch (SocketTimeoutException e){
-           return null;
-        }
     }
 
     //判断map是否存在缓存
@@ -161,6 +159,16 @@ public abstract class BaseThreadAdapter extends BaseThread{
             }
     }
 
-
+    //截取字符串
+    public static String carpter(String data,String start,String end){
+        if (data.contains(start)){
+            int i = data.indexOf("\"");
+            data = data.substring(i+1);
+        }
+        if (data.contains(end)){
+            data = data.substring(0,data.indexOf("\""));
+        }
+        return data;
+    }
 
 }

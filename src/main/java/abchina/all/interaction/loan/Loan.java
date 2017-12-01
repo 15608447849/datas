@@ -11,21 +11,24 @@ import org.jsoup.select.Elements;
 import java.util.HashMap;
 
 public class Loan extends AllDataIns {
-    private static final HashMap<Integer, String> TYPE_CLASS = new HashMap<Integer, String>();
-    private static final String URL = "http://www.abchina.com/cn/PersonalServices/Loans";
-    private int currentIndex;
+
 
     public Loan(AllData mData) throws Exception {
         super(mData);
     }
 
+    private HashMap<Integer, String> TYPE_CLASS ;
+    private String URL;
+    private int currentIndex;
     @Override
     protected void init() {
+        URL = "http://www.abchina.com/cn/PersonalServices/Loans";
         initTypeClassMap();
         currentIndex = 1;
     }
 
     private void initTypeClassMap() {
+        TYPE_CLASS = new HashMap<>();
         TYPE_CLASS.put(1, "安居 好时贷系列");
         TYPE_CLASS.put(2, "消费 好时贷系列");
         TYPE_CLASS.put(3, "创业 好时贷系列");
@@ -34,11 +37,9 @@ public class Loan extends AllDataIns {
 
     private String convURL(String url) {
         String result = "";
-
         if (!StringUtil.isEntry(url) && !url.isEmpty()) {
            result = URL + url.substring(1);  //去除标记为当前页面的小数点. 并转化为绝对路径。
         }
-
         return result;
     }
 
@@ -61,7 +62,6 @@ public class Loan extends AllDataIns {
                     loanBean.set_class(currentIndex);
                     loanBean.setDesc(content.select("dt[class=mob_fontS_normal pc_com_dt]").first().text());
                     loanBean.setQr_code(convURL(content.select("a").first().attr("href")));
-
                     mData.getJsObject().getLoan().add(loanBean);
                 }
 

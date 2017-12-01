@@ -1,6 +1,7 @@
 package interfaces;
 
 import icbc.Icbc;
+import lunch.Say;
 
 import java.util.Arrays;
 import java.util.HashMap;
@@ -26,6 +27,7 @@ public abstract class ParamManagerAdapter implements ParamManager{
 
     @Override
     public void setDirs(String path) {
+
         if (path==null) return;
         if(!path.startsWith("/")) path = "/"+path;
         if (path.endsWith("/")) path = path.substring(0,path.lastIndexOf("/"));

@@ -17,27 +17,25 @@ import java.util.Map;
  * Created by user on 2017/10/10.
  */
 public class Creditcard extends AllDataIns {
-    private static final String PAGE_SIZE_BASE  = "{{PS}}";
-    private static final String PAGE_INDEX_BASE = "{{PI}}";
-    private static final String URL_BASE = "http://www.abchina.com/services/creditcard/Webapi/api/ApiWebCardInfo/GetCardInfoList?PageSize="
-           + PAGE_SIZE_BASE  + "&PageIndex="
-           + PAGE_INDEX_BASE + "&CardName=&CardType=&CardsRights=&Cointype=&AskFor=false&CardSource=&ApplyArea=36";
-
-    private static final String URL_HEAD = "http://www.abchina.com";
-
-    private static final HashMap<Integer, String> TYPE_NAME = new HashMap<Integer, String>();
-
-    private static final int PAGE_SIZE_NUM = 220;
-
-    private int currentIndex;
-
-
     public Creditcard(AllData mData) throws Exception {
         super(mData);
     }
-
+    private String PAGE_SIZE_BASE;
+    private String PAGE_INDEX_BASE;
+    private String URL_BASE;
+    private String URL_HEAD;
+    private HashMap<Integer, String> TYPE_NAME;
+    private int PAGE_SIZE_NUM;
+    private int currentIndex;
     @Override
     protected void init() {
+        PAGE_SIZE_BASE  = "{{PS}}";
+        PAGE_INDEX_BASE = "{{PI}}";
+        URL_BASE = "http://www.abchina.com/services/creditcard/Webapi/api/ApiWebCardInfo/GetCardInfoList?PageSize="
+                + PAGE_SIZE_BASE  + "&PageIndex="
+                + PAGE_INDEX_BASE + "&CardName=&CardType=&CardsRights=&Cointype=&AskFor=false&CardSource=&ApplyArea=36";
+        PAGE_SIZE_NUM = 500;
+        URL_HEAD = "http://www.abchina.com";
         initTypeMap();
         currentIndex = 0;   //初始化当前页面所在索引。
     }
@@ -47,6 +45,7 @@ public class Creditcard extends AllDataIns {
      */
 
     private void initTypeMap() {
+        TYPE_NAME = new HashMap<>();
         TYPE_NAME.put(1 , "标准类型");
         TYPE_NAME.put(11, "车主类型");
         TYPE_NAME.put(4 , "商旅类型");
@@ -58,7 +57,7 @@ public class Creditcard extends AllDataIns {
     }
 
     private SourceData getSourceData(String url) throws Exception {
-        return mData.jTextToJson(mData.getHttpResponse(url, null, true).body(), SourceData.class);
+        return mData.urlTranslateJsonObject(url,SourceData.class);
     }
 
     private String convUrl(int pageSize, int pageIndex) {
@@ -67,7 +66,6 @@ public class Creditcard extends AllDataIns {
 
     private String getDescription(String url) {
         String result = "";
-
         if (url != null && !url.trim().isEmpty()) {
             try {
                 result = mData.getDocumentByUrl(url).select("div[class=sc_widthPer64_info ybw_2]").first().text();
@@ -99,7 +97,6 @@ public class Creditcard extends AllDataIns {
                     cardBean.setCard_img(mData.getGoodsImageUrl(
                             res.getImgPubUrl() + res.getSrcFile(),
                             this.getClass().getSimpleName() + FileUtil.SEPARATOR + cardBean.getName()));
-                    Say.I(cardBean);
                     mData.getJsObject().getCreditcard().add(cardBean);
                 }
             }

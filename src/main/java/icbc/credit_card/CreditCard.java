@@ -11,6 +11,7 @@ import lunch.Say;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.select.Elements;
+import sun.rmi.runtime.Log;
 
 import java.io.IOException;
 import java.util.ArrayList;
@@ -66,11 +67,14 @@ public class CreditCard extends BaseThread {
     private String getTotalCount(String indexUrl) throws IOException {
         Document doc = Jsoup.connect(indexUrl).timeout(TIMEOUT).get();
         Elements script  = doc.select("script[language=javascript1.1]");
-        String str = script.get(1).toString();
-        str = str.substring(str.indexOf("initParams")+11);
-        str = str.substring(0,str.lastIndexOf(")"));
-        String arr[] = str.split(",");
-        return arr[2].trim();
+        if (script.size()>=2){
+            String str = script.get(1).toString();
+            str = str.substring(str.indexOf("initParams")+11);
+            str = str.substring(0,str.lastIndexOf(")"));
+            String arr[] = str.split(",");
+            return arr[2].trim();
+        }
+            return getTotalCount(indexUrl);
     }
 
     private void getData(String sessionId,String totalCount) throws Exception {

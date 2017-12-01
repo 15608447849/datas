@@ -8,8 +8,8 @@ import lunch.Say;
 public class Abchina extends ParamManagerAdapter {
     private Abchina() {
         super("abchina");
-//        map.put("abchina.rate.Rate","农业银行外汇");
-//        map.put("abchina.preciousMetal.PreciousMetal","农业银行贵金属");
+        map.put("abchina.rate.Rate","农业银行外汇");
+        map.put("abchina.preciousMetal.PreciousMetal","农业银行贵金属");
         map.put("abchina.all.AllData","农业银行互动营销");
 
 
