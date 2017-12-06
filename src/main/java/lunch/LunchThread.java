@@ -6,11 +6,13 @@ import com.google.gson.Gson;
 import com.winone.ftc.mcore.imps.ManagerImp;
 import com.winone.ftc.mentity.mbean.entity.ManagerParams;
 import com.winone.ftc.mtools.FileUtil;
+import com.winone.ftc.mtools.Log;
 import icbc.Icbc;
 import icbc.interaction.GoodsDataAllRecode;
 import interfaces.*;
 
 import java.io.File;
+import java.net.InetSocketAddress;
 import java.util.List;
 
 /**
@@ -23,14 +25,14 @@ public class LunchThread extends Thread implements ActionCall{
     private final String jsonFile ="./pick.json";
 
     public LunchThread() {
-        ConfigBean configBean = init();//初始化定时器
+        ConfigBean configBean = init();//初始化定时器等
         initDownParam(configBean.getDownloadMaxThread());
-        initLaunceList(configBean.getFirstBack(),configBean.getHome(),configBean.getDirectory());//判断类型,设置主目录 路径
+        initLaunceList(configBean.getFirstBack(),configBean.getHome(),configBean.getDirectory(),configBean.getSaveDay());//判断类型,设置主目录 路径
         intervalTime = configBean.getExecuteType();
         start();
     }
 
-    private void initLaunceList(String firstBack,String home,String dirs) {
+    private void initLaunceList(String firstBack,String home,String dirs,int saveDay) {
         ParamManagerAdapter adpter = getBackType(firstBack);
         if (adpter==null){
             Say.I("不匹配的参数类型: firstBack ,不识别的银行类型.请修改后重新尝试.");
@@ -38,8 +40,8 @@ public class LunchThread extends Thread implements ActionCall{
         }else{
             adpter.setHomeFile(home);
             adpter.setDirs(dirs);
+            adpter.setSaveDay(saveDay);
             lunchList = adpter.getStartItemList();
-
             //Say.I("当前抓取的银行: "+adpter+"\n抓取数据存储主目录: "+ home +"\n可抓取类别:\n"+lunchList);
         }
 
@@ -60,7 +62,7 @@ public class LunchThread extends Thread implements ActionCall{
     }
 
 
-    //初始化 下载器
+    //初始化
     private void initDownParam(int threadNumber) {
         if (threadNumber<=1) threadNumber = 1;
         ManagerParams params = new ManagerParams();
@@ -68,7 +70,7 @@ public class LunchThread extends Thread implements ActionCall{
         params.setCheckNetwork(false);
         params.setRecode(false);
         params.setRuntimeThreadMax(threadNumber);
-        ManagerImp.get().initial(params);
+        ManagerImp.get().initial(params);//全局管理器
     }
 
     /**
@@ -84,10 +86,11 @@ public class LunchThread extends Thread implements ActionCall{
                 Gson gson = new Gson();
                 configBean = gson.fromJson(content,ConfigBean.class);
                 if (configBean.getExecuteType()!=0){
-                    TimeBean timeBean = gson.fromJson(content, TimeBean.class);
-                    if (timeBean.check()){
-                        TimeThreadFactory.create(timeBean);
+                    TimeBean bean = gson.fromJson(content, TimeBean.class);
+                    if (bean.check()){
+                        TimeThreadFactory.create(bean);
                     }
+                    NotifyServer.get().initServer(bean.getNotify_server());
                 }
             }
         } catch (Exception e) {
@@ -102,7 +105,14 @@ public class LunchThread extends Thread implements ActionCall{
                 Say.I("数据抓取成功将结束进程.");
                 lunch();
             }else if (intervalTime == 1){
-                Say.I("不自动抓取,不结束进程");
+                Say.I("不自动抓取,不结束进程.");
+                synchronized (this) {
+                    try {
+                        wait();
+                    } catch (InterruptedException e) {
+                        e.printStackTrace();
+                    }
+                }
             }else if (intervalTime == 2){
                 Say.I("执行首次数据抓取并保持存活.");
                 lunch();

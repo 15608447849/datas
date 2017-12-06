@@ -3,8 +3,9 @@
 config
       home 资源主目录
       directory 主文件夹
+      saveDay 保存天数
       executeType 执行类型
-        0 数据抓取成功将结束进程.(定时任务不会被执行,且不会通知服务器)
+        0 数据抓取成功将结束进程.(定时任务不会被执行)
         1 不自动抓取,不结束进程
         2 执行首次数据抓取并保持存活
       downloadMaxThread 下载线程最大并发数
@@ -23,10 +24,12 @@ interval_time  间隔抓取的任务 请勿随意修改 key, value 间隔时间.
 
 {
   "config":{
-    "home":"C:/DATAPICK",
+    "home":"C:\\ftcServer\\source",
     "executeType":"0",
-    "downloadMaxThread":"4",
-    "firstBack":"abchina"
+    "downloadMaxThread":"8",
+    "firstBack":"icbc",
+    "saveDay":"7",
+    "directory":"lzp"
   },
   "notify_server":{
     "host":"172.16.1.24",
@@ -34,12 +37,21 @@ interval_time  间隔抓取的任务 请勿随意修改 key, value 间隔时间.
     "notify":"true"
   },
   "determinated_time":{
-    "ccb.interaction.Interactions":"07:00:00",
-    "ccb.seckillsOrGroups.SeckillsOrGroups":"07:00:00#12:00:00",
-    "ccb.buyAllshop.BuyAllShop":"07:00:00#12:00:00"
+    "icbc.credit_card.CreditCard":"11:11:00",
+    "icbc.financial.Financial":"23:00:00",
+    "icbc.foreign_exchange.ForeignExchange":"23:00:00",
+    "icbc.fund.Fund":"23:00:00",
+    "icbc.insurance.Insurance":"23:00:00",
+    "icbc.offline_xperience_achine.NormalGood":"23:00:00",
+    "icbc.person_loan.PersonLoan":"23:00:00"
   },
+  "special_time":{
+    "icbc.interaction.GoodsDataAllRecodeLaunch":"17:14:10"
+  }
+,
   "interval_time":{
-    "ccb.foreignExchange.ForeignExchange":"60",
-    "ccb.accountGold.AccountGold":"180"
+    "icbc.precious_metal.PreciousMetal":"30",
+    "icbc.foreign_exchange.ForeignExchange":"30",
+    "icbc.offline_xperience_achine.GroupBuy":"14400"
   }
 }

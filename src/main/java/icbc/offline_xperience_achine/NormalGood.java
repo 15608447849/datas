@@ -58,14 +58,18 @@ public class NormalGood extends BaseThread{
                         seclass.setId(val);
                         seclass.setName(ele.text());
                         seclass.setBanner(new ArrayList<>());
-
                         val = "floors_" + val;
                         elsTem2 = el.select("#" + val + " .floor_slide ul li a");
                         for (Element ele2 : elsTem2) {
                             banner = new Banner();
                             val = ele2.select("img").attr("_src").trim();
+                            if (val.length()==0) val =  ele2.select("img").attr("src").trim();
                             banner.setImg(getGoodsImageUrl(val));
-                            banner.setLink(ele2.attr("href"));//
+                            val = ele2.attr("href");
+                            if (!val.contains(ICBCURL)){
+                                val = ICBCURL+val;
+                            }
+                            banner.setLink(val);//
                             seclass.getBanner().add(banner);
                         }
                         menu.getSeclass().add(seclass);
@@ -75,9 +79,11 @@ public class NormalGood extends BaseThread{
 
                 elsTem = el.select(".floors_info div.floors_r .floors_tab");
                 String cid;
+
                 for (Element ele : elsTem) {
                     val = ele.attr("id").substring(7);
                     cid = val;
+
                     if (cid.equals("0000001157")) continue;
                         elsTem2 = ele.select("ul li[data=6prod]");
                         if (null != elsTem2 && elsTem2.size() > 0) {
@@ -210,6 +216,9 @@ public class NormalGood extends BaseThread{
 
     @Override
     public String getGoodsImageUrl(String url, String path) {
+        if (!url.contains("mall.icbc.com.cn")){
+            url = ICBCURL+url;
+        }
         return super.getGoodsImageUrl(url, path,Icbc.getInstance().getImageParams().getParam1(),Icbc.getInstance().getImageParams().getParam2()).substring(1);
     }
 

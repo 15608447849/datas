@@ -9,4 +9,6 @@ public interface ParamManager {
     String getHomeFile();
     String getPathFile();
     String getKeyTitle(String key);
+    void setSaveDay(int day);
+    int getSaveDay();
 }

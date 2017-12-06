@@ -62,4 +62,8 @@ public class ConfigBean {
     public String getFirstBack() {
         return getKey("firstBack","node"); //icbc 建设银行
     }
+    //获取资源保存资源天数
+    public int getSaveDay(){
+        return getKey("saveDay",-1);
+    }
 }

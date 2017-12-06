@@ -17,6 +17,7 @@ import java.net.SocketTimeoutException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
 
@@ -42,6 +43,7 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     private int reMackCount = 0;
     //时间
     private long sTime = System.currentTimeMillis();
+
     private final ReentrantLock lock = new ReentrantLock();
     private final ParamManager paramManager;
     private final DownloadMonitor monitor;
@@ -427,6 +429,21 @@ public abstract class BaseThread extends Thread implements MonitorAction {
         completeOver(true);
     }
 
+
+    //判断时间是否在当前时间指定天数内
+    private boolean isLatestDay(Date compareTime,Date nowTime,int day){
+        if (day<=0) return false;
+        Calendar calendar = Calendar.getInstance();  //得到日历
+        calendar.setTime(nowTime);//把当前时间赋给日历
+        calendar.add(Calendar.DAY_OF_MONTH, -day);  //设置为指定天数前
+        Date beforeDays = calendar.getTime();   //得到指定天数前的时间
+        if(beforeDays.getTime() < compareTime.getTime()){
+            return true;
+        }else{
+            return false;
+        }
+    }
+
     private void deleteRes(ArrayList<String> list) {
         new TraversalResourceFile(homeDir+RES_HOME_PATH, list, new TRAction() {
             @Override
@@ -436,20 +453,24 @@ public abstract class BaseThread extends Thread implements MonitorAction {
                     if (filePath.toFile().isDirectory()){
                         if (filePath.toFile().listFiles().length==0) filePath.toFile().delete(); //删除空文件夹
                     }else{
-                        ArrayList<String> comList = (ArrayList<String>) attr;
-                        Iterator<String> iterator = comList.iterator();
-                        String sPath = filePath.toFile().getCanonicalPath();
+                        Iterator<String> iterator = ((ArrayList<String>) attr).iterator(); //记录的所有文件
+                        String sPath = filePath.toFile().getCanonicalPath();//当前遍历到的文件
                         File file;
                         while (iterator.hasNext()){
                             file = new File(iterator.next());
                             if (file.getCanonicalPath().equals(filePath.toFile().getCanonicalPath())){
+                                //需要保存的文件
                                 iterator.remove();
                                 return FileVisitResult.CONTINUE;
                             }
                         }
-                        if (!sPath.contains(".conf")){
-                            FileUtil.deleteFile(sPath);
-//                            Say.I("删除: "+ sPath + " "+(FileUtil.deleteFile(sPath)?"成功":"失败"));
+                        //需要删除的文件
+                        if (!sPath.contains(".conf")){ //如果不是 .conf文件 则删除
+                            //接着判断当前保存天数
+                            if (!isLatestDay(new Date(attrs.lastModifiedTime().toMillis()), new Date(), paramManager.getSaveDay())){
+                                FileUtil.deleteFile(sPath);
+                            }
+//                          Say.I("删除: "+ sPath + " "+(FileUtil.deleteFile(sPath)?"成功":"失败"));
                         }
                     }
 

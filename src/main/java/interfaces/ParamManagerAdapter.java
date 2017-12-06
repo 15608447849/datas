@@ -14,7 +14,7 @@ public abstract class ParamManagerAdapter implements ParamManager{
     protected final HashMap<String,String> map = new HashMap<>();
     private String home = ".";
     private String path = "/";
-
+    private int saveDay = -1;
     protected ParamManagerAdapter(String path){
         if (path==null || path.isEmpty()) path = getClass().getSimpleName();
         this.path+=path;
@@ -56,5 +56,15 @@ public abstract class ParamManagerAdapter implements ParamManager{
     }
     public List<String> getStartItemList(){
         return Arrays.asList(map.keySet().toArray(new String[map.keySet().size()]));
+    }
+
+    @Override
+    public void setSaveDay(int day) {
+        this.saveDay = day;
+    }
+
+    @Override
+    public int getSaveDay() {
+        return saveDay;
     }
 }
