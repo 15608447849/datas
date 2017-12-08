@@ -24,34 +24,32 @@ interval_time  间隔抓取的任务 请勿随意修改 key, value 间隔时间.
 
 {
   "config":{
-    "home":"C:\\ftcServer\\source",
+    "home":"C:\\Users\\user\\Desktop\\aaa",
     "executeType":"0",
     "downloadMaxThread":"8",
     "firstBack":"icbc",
-    "saveDay":"7",
-    "directory":"lzp"
+    "saveDay":"7"
   },
   "notify_server":{
     "host":"172.16.1.24",
     "port":"65000",
-    "notify":"true"
+    "notify":"false"
   },
   "determinated_time":{
-    "icbc.credit_card.CreditCard":"11:11:00",
+    "icbc.credit_card.CreditCard":"23:00:00",
     "icbc.financial.Financial":"23:00:00",
     "icbc.foreign_exchange.ForeignExchange":"23:00:00",
     "icbc.fund.Fund":"23:00:00",
     "icbc.insurance.Insurance":"23:00:00",
-    "icbc.offline_xperience_achine.NormalGood":"23:00:00",
+    "icbc.offline_xperience_achine.NormalGood":"12:00:00",
     "icbc.person_loan.PersonLoan":"23:00:00"
   },
   "special_time":{
     "icbc.interaction.GoodsDataAllRecodeLaunch":"17:14:10"
-  }
-,
+  },
   "interval_time":{
-    "icbc.precious_metal.PreciousMetal":"30",
-    "icbc.foreign_exchange.ForeignExchange":"30",
+    "icbc.precious_metal.PreciousMetal":"60",
+    "icbc.foreign_exchange.ForeignExchange":"60",
     "icbc.offline_xperience_achine.GroupBuy":"14400"
   }
 }

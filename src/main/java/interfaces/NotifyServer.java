@@ -38,7 +38,7 @@ public class NotifyServer extends FtcTcpActionsAdapter implements Runnable{
     private FtcSocketClient client;
     private InetSocketAddress serverAddress;
     public void initServer(HashMap<String, String> map) {
-        Say.I("启动通讯");
+
         if (map == null || map.size()==0) return;
         String flag = map.get("notify");
         if (flag==null || flag.equals("false")) return;
@@ -46,6 +46,7 @@ public class NotifyServer extends FtcTcpActionsAdapter implements Runnable{
             String host = map.get("host");
             int port = Integer.parseInt(map.get("port"));
             serverAddress = new InetSocketAddress(host,port);
+            Say.I("启动通讯");
         } catch (Exception e) {
         }
     }

@@ -108,7 +108,7 @@ public class GroupBuy extends BaseThread {
                     groups.getImage_list().add(imageUrl);
                 }
             groups.setBuy_link(url);
-        } catch (IOException e) {
+        } catch (Exception e) {
 //            e.printStackTrace();
             waitTime(500);
             setSeckillsItems(groups,url);
@@ -158,7 +158,7 @@ public class GroupBuy extends BaseThread {
                 }
             }
             groups.setBuy_link(url);
-        } catch (IOException e) {
+        } catch (Exception e) {
 //            e.printStackTrace();
             waitTime(1000);
             setSeckillsItems(groups,url);

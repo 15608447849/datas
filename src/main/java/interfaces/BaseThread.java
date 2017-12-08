@@ -17,6 +17,7 @@ import java.net.SocketTimeoutException;
 import java.nio.file.FileVisitResult;
 import java.nio.file.Path;
 import java.nio.file.attribute.BasicFileAttributes;
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.*;
 import java.util.concurrent.locks.ReentrantLock;
@@ -28,24 +29,24 @@ import java.util.concurrent.locks.ReentrantLock;
 public abstract class BaseThread extends Thread implements MonitorAction {
     //超时时间
     public int TIMEOUT = 10 * 1000;
-    private String homeDir;
+    protected String homeDir;
     //标识
-    public String KEY;
+    protected String KEY;
     //资源主目录路径
-    public String RES_HOME_PATH;
+    protected String RES_HOME_PATH;
     //json主目录路径
-    public String JSON_HOME_PATH;
+    protected String JSON_HOME_PATH;
     //json文件名
-    public String JSON_FILE_NAME;
+    protected String JSON_FILE_NAME;
     //资源文件下载链接文件
-    public String RES_URL_DOWNLOAD_FILE;
+    protected String RES_URL_DOWNLOAD_FILE;
     //重新尝试次数
     private int reMackCount = 0;
     //时间
     private long sTime = System.currentTimeMillis();
 
     private final ReentrantLock lock = new ReentrantLock();
-    private final ParamManager paramManager;
+    protected final ParamManager paramManager;
     private final DownloadMonitor monitor;
     private final ArrayList<StoreTextBean> recodeTextList = new ArrayList<>();
     private void addTextBean(StoreTextBean textBean){
@@ -57,8 +58,14 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     private void recodeTextBean(){
         Iterator<StoreTextBean> iterator = recodeTextList.iterator();
         while (iterator.hasNext()){
-            iterator.next().store();
+            iterator.next().store();//存文本数据
             iterator.remove();
+        }
+    }
+    private void deleteRecodeTextBean(){
+        Iterator<StoreTextBean> iterator = recodeTextList.iterator();
+        while (iterator.hasNext()){
+            iterator.next().delete();//存文本数据
         }
     }
     //动作回调
@@ -220,9 +227,11 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     private void completeOver(boolean flag) {
         CatchBean catchBean = new CatchBean();
         catchBean.setName(KEY);
+        //删除旧JSON文件
+        deleteRecodeTextBean();
         if (flag) {
-            catchBean.setResZip(compressExe(0)); //压缩资源文件目录
-            catchBean.setResFileLink(RES_URL_DOWNLOAD_FILE);
+            catchBean.setResZip(compressExe(0)); //设置压缩资源文件目录路径返回下载ZIP包地址
+            catchBean.setResFileLink(RES_URL_DOWNLOAD_FILE);//所有的单文件下载地址
         }
         recodeTextBean();
         File fDir = new File(homeDir+JSON_HOME_PATH);
@@ -418,17 +427,35 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     public void downOver(Object data) {
         ArrayList<String> list = (ArrayList<String>) data;
         ArrayList<String> resPath = new ArrayList<>();
-        //删除资源目录下,非列表中的文件 删除文件
+        //过滤 - 删除文件中的 主目录 字符串
         for (String str : list){
             resPath.add(str.replace(homeDir,""));
         }
-        //资源路径
+        //写入存储资源路径的Json文件
         writeRes2File(objTansJson(resPath),RES_URL_DOWNLOAD_FILE);
+        //文件过滤 -删除不在指定时间内且不在需要保存的列表中的文件
         deleteRes(list);
         //下载结果回调
         completeOver(true);
     }
 
+
+    //return yyyy-MM-dd
+    protected String getNowDayStr(){
+        Calendar now = Calendar.getInstance();
+        return now.get(Calendar.YEAR)+"-"+(now.get(Calendar.MONTH) + 1)+"-"+now.get(Calendar.DAY_OF_MONTH);
+    }
+    protected boolean isLatestDayByNowPStr(String timeStr, int day){
+        try {
+            SimpleDateFormat format = new SimpleDateFormat("yyyy-MM-dd");
+            Date date1 = format.parse(timeStr);
+            Date date2 = format.parse(getNowDayStr());
+            return isLatestDay(date1,date2,day);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return false;
+    }
 
     //判断时间是否在当前时间指定天数内
     private boolean isLatestDay(Date compareTime,Date nowTime,int day){
@@ -445,21 +472,18 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     }
 
     private void deleteRes(ArrayList<String> list) {
-        new TraversalResourceFile(homeDir+RES_HOME_PATH, list, new TRAction() {
+        new TraversalResourceFile(homeDir+RES_HOME_PATH, list, new TRAction.Adpter() {
             @Override
             public FileVisitResult onReceive(Path filePath, BasicFileAttributes attrs, Object attr) {
-
                 try {
                     if (filePath.toFile().isDirectory()){
                         if (filePath.toFile().listFiles().length==0) filePath.toFile().delete(); //删除空文件夹
                     }else{
                         Iterator<String> iterator = ((ArrayList<String>) attr).iterator(); //记录的所有文件
                         String sPath = filePath.toFile().getCanonicalPath();//当前遍历到的文件
-                        File file;
                         while (iterator.hasNext()){
-                            file = new File(iterator.next());
-                            if (file.getCanonicalPath().equals(filePath.toFile().getCanonicalPath())){
-                                //需要保存的文件
+                            if (new File(iterator.next()).getCanonicalPath().equals(filePath.toFile().getCanonicalPath())){
+                                //找到一个在文件列表中存在的 - 需要保存的文件
                                 iterator.remove();
                                 return FileVisitResult.CONTINUE;
                             }
@@ -477,11 +501,6 @@ public abstract class BaseThread extends Thread implements MonitorAction {
                 } catch (IOException e) {
                 }
                 return FileVisitResult.CONTINUE;
-            }
-
-            @Override
-            public void onError(Exception e) {
-                e.printStackTrace();
             }
         });
     }

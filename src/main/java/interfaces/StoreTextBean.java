@@ -14,7 +14,17 @@ public class StoreTextBean {
         this.filePath = filePath;
         this.fileName = fileName;
     }
-    protected void store(){
+    public StoreTextBean(String text, String fullPath) {
+        this.text = text;
+        fullPath = FileUtil.replaceFileSeparatorAndCheck(fullPath,null,null);
+        this.filePath = fullPath.substring(0,fullPath.lastIndexOf(FileUtil.SEPARATOR));
+        this.fileName = fullPath.substring(fullPath.lastIndexOf(FileUtil.SEPARATOR)+1);
+    }
+    public void store(){
         FileUtil.writeStringToFile(text, filePath, fileName, false);
+    }
+
+    public void delete() {
+        FileUtil.deleteFile(filePath+FileUtil.SEPARATOR+fileName);
     }
 }

@@ -14,4 +14,18 @@ public interface TRAction {
      */
     FileVisitResult onReceive(Path filePath, BasicFileAttributes attrs,Object attr);
     void onError(Exception e);
+
+    public static abstract class Adpter implements TRAction{
+
+        @Override
+        public FileVisitResult onReceive(Path filePath, BasicFileAttributes attrs, Object attr) {
+            return FileVisitResult.TERMINATE;
+        }
+
+        @Override
+        public void onError(Exception e) {
+
+        }
+    }
+
 }

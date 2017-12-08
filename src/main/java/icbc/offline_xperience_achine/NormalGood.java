@@ -1,21 +1,26 @@
 package icbc.offline_xperience_achine;
 
+import com.google.gson.Gson;
+import com.google.gson.reflect.TypeToken;
+import com.winone.ftc.mtools.FileUtil;
 import icbc.Icbc;
-import interfaces.ActionCall;
-import interfaces.BaseThread;
-import lunch.Param;
+import interfaces.*;
 import icbc.offline_xperience_achine.obj.NorGoodsBean;
 import icbc.offline_xperience_achine.obj.goodss.Goods;
 import icbc.offline_xperience_achine.obj.menus.Banner;
 import icbc.offline_xperience_achine.obj.menus.Menu;
 import icbc.offline_xperience_achine.obj.menus.Seclass;
-import lunch.Say;
 import org.jsoup.Jsoup;
 import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
+import java.io.File;
+import java.nio.file.FileVisitResult;
+import java.nio.file.Path;
+import java.nio.file.attribute.BasicFileAttributes;
 import java.util.ArrayList;
+import java.util.Iterator;
 import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -118,17 +123,109 @@ public class NormalGood extends BaseThread{
                 }
 
             }
-
             //过滤link-过滤content - iframe
             filter(obj.getGoods());
-
-
+            filterJsonFile(obj);
             //转换js
             transInteractionGoods(obj,"data","json_1");
+
+    }
+
+    /**
+     * 对指定天数json文件内容做累加
+     */
+    private void filterJsonFile(NorGoodsBean obj) {
+
+        final int saveDay = paramManager.getSaveDay(); //指定天数
+        if (saveDay>0){
+            //保存成当天日期的JSON
+            new StoreTextBean(objTansJson(obj.getGoods()),homeDir+JSON_HOME_PATH,getNowDayStr()+".bak").store();
+            final ArrayList<String> fLists = new ArrayList<>();
+            //获取指定天数的JSON文件 , 删除不符合规定的json文件
+            new TraversalResourceFile(homeDir+JSON_HOME_PATH, null, new TRAction.Adpter(){
+                @Override
+                public FileVisitResult onReceive(Path filePath, BasicFileAttributes attrs, Object attr) {
+
+                    try {
+                        File file = filePath.toFile();
+                        if (file.isFile() && file.getName().indexOf(".bak")>0 ){ //判断文件类型和后缀
+                            String str = file.getName().substring(0,file.getName().indexOf("."));
+                            if (isLatestDayByNowPStr(str,saveDay)){//判断是否在指定天数内
+                                //在指定天数内  - 过滤
+                                if (!str.equals(getNowDayStr())){ //排除今天
+                                    fLists.add(file.getCanonicalPath());
+                                }
+                            }else{
+                                //不在指定天数内 - 删除
+                                file.delete();
+                            }
+                        }
+                    } catch (Exception e) {
+                    }
+                    return FileVisitResult.CONTINUE;
+                }
+            });
+
+            if (fLists.size()>0){
+                List<Goods> goods = obj.getGoods();
+                //反向遍历
+                List<Goods> oList;
+                Iterator<Goods> iterator;
+                Goods goodsEntity;
+                for (int i = fLists.size()-1;i>=0;i--){
+                    oList = new Gson().fromJson(FileUtil.readFileText(fLists.get(i),"UTF-8"),new TypeToken<List<Goods>>(){}.getType());
+                    if (oList!=null && oList.size()>0){
+                        iterator = oList.iterator();
+                        while (iterator.hasNext()){
+                            goodsEntity = iterator.next();
+
+                            if (goodsEntity.getGoods_id()==null || goodsEntity.getGoods_id().length()==0){
+                                iterator.remove();
+                            }else{
+                                for (Goods it : goods){
+                                    if (goodsEntity.getGoods_id().equals(it.getGoods_id())) {
+                                        //已存在的 - 比较下一个
+                                        iterator.remove();
+                                        break;//跳出循环
+                                    }
+                                }
+                            }//
+                        }
+
+                        //再次存储数据 - 保存累计数据
+                        if (oList.size()>0){
+                            for (Goods it : oList){
+                                goods.add(it);
+                            }
+                            new StoreTextBean(objTansJson(oList),fLists.get(i)).store();
+                        }else{
+                            FileUtil.deleteFile(fLists.get(i));
+                        }
+                    }//2-end
+
+                } //第一层循环end
+            }
+        }
+
     }
 
 
+    /***
+     *     NorGoodsBean o = new Gson().fromJson(FileUtil.readFileText(filePath.toFile().getCanonicalPath(),"UTF-8"),NorGoodsBean.class);
+     List<Goods> goods = o.getGoods();
+     List<Goods> temp = new ArrayList<>();
+     for (Goods it: goods){
+     for (Goods it2: obj.getGoods()){
+     if (it.getGoods_id().equals(it2.getClass_id())){
+     break;
+     }else{
+     temp.add(it);
+     }
+     }
+     }
 
+     * @param goodsList
+     */
 
     private void filter(List<Goods> goodsList) {
         for (Goods goods : goodsList){

@@ -33,4 +33,12 @@ public class NorGoodsBean {
     public void setGoods(List<Goods> goods) {
         this.goods = goods;
     }
+
+    @Override
+    public String toString() {
+        return "NorGoodsBean{" +
+                "menu=" + menu +
+                ", goods=" + goods +
+                '}';
+    }
 }

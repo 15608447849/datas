@@ -16,7 +16,7 @@ public class TraversalResourceFile extends SimpleFileVisitor<Path>{
     private final TRAction action;
     private final Object attr;
     public TraversalResourceFile(String root,Object attr,TRAction action) {
-        if (root==null || attr==null || action==null) throw new IllegalArgumentException("param is null.["+root+","+attr+","+action+"]");
+        if (root==null ||  action==null) throw new IllegalArgumentException("param is null.["+root+","+action+"]");
         this.action = action;
         this.attr = attr;
         try {
