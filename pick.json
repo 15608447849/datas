@@ -24,16 +24,16 @@ interval_time  间隔抓取的任务 请勿随意修改 key, value 间隔时间.
 
 {
   "config":{
-    "home":"C:\\Users\\user\\Desktop\\aaa",
-    "executeType":"0",
-    "downloadMaxThread":"8",
+    "home":"C:\\ftcServer\\resource",
+    "executeType":"2",
+    "downloadMaxThread":"4",
     "firstBack":"icbc",
     "saveDay":"7"
   },
   "notify_server":{
     "host":"172.16.1.24",
     "port":"65000",
-    "notify":"false"
+    "notify":"true"
   },
   "determinated_time":{
     "icbc.credit_card.CreditCard":"23:00:00",

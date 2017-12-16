@@ -275,7 +275,7 @@ public abstract class BaseThread extends Thread implements MonitorAction {
             work3Imps();
         } catch (Exception e) {
             if (e instanceof SocketTimeoutException){
-               Say.I("超时 -  task: [" + paramManager.getKeyTitle(KEY) +"]");
+               Say.I("超时>>[" + getKeyString() +"]");
             }else{
                 error(e);
             }
@@ -290,8 +290,9 @@ public abstract class BaseThread extends Thread implements MonitorAction {
      * 初始化
      */
     protected void init() {
-        //记录启动时间  (当启动时间距离当前时间>2小时(60 * 60 * 2 * 1000),会被回收 )
-        Say.I("task: [" + paramManager.getKeyTitle(KEY) +"]  ,thread: ["+this.getName() +"]  ,thread number: ["+ Thread.activeCount()+"]");
+        //记录启动时间  (当启动时间距离当前时间>30分钟(30 * 2 * 1000),会被回收 )
+//        Say.I("task: [" + paramManager.getKeyTitle(KEY) +"]  ,thread: ["+this.getName() +"]  ,thread number: ["+ Thread.activeCount()+"]");
+//        Say.I("[" + getKeyString()+"]");
         sTime = System.currentTimeMillis();
         monitor.clear();
         clearTextBean();
@@ -508,6 +509,10 @@ public abstract class BaseThread extends Thread implements MonitorAction {
     @Override
     public String getKey() {
         return KEY;
+    }
+
+    public String getKeyString(){
+        return paramManager.getKeyTitle(KEY);
     }
 
     /**

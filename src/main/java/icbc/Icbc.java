@@ -24,9 +24,9 @@ public class Icbc extends ParamManagerAdapter {
         map.put("icbc.fund.Fund","工商银行基金");
         map.put("icbc.credit_card.CreditCard","工商银行信用卡");
         map.put("icbc.financial.Financial","工商银行金融产品");
-        map.put("icbc.precious_metal.PreciousMetal","工商银行贵金属");
-        map.put("icbc.person_loan.PersonLoan","工商银行个人理财");
         map.put("icbc.insurance.Insurance","工商银行保险");
+        map.put("icbc.person_loan.PersonLoan","工商银行个人理财");
+        map.put("icbc.precious_metal.PreciousMetal","工商银行贵金属");
         map.put("icbc.foreign_exchange.ForeignExchange","工商银行利率");
 
         goodsList.add("icbc.credit_card.CreditCard");

@@ -1,6 +1,7 @@
 package interfaces;
 
 import com.winone.ftc.mtools.ClazzUtil;
+import com.winone.ftc.mtools.Log;
 import lunch.Say;
 
 import java.lang.reflect.Constructor;
@@ -18,7 +19,7 @@ import java.util.concurrent.locks.ReentrantLock;
 public class BaseThreadManager extends Thread{
     public final HashMap<String,BaseThread> runningMap = new HashMap<>();
     private final ReentrantLock public_lock = new ReentrantLock();
-    private final long IN_TIME = 60 * 60 * 2 * 1000L; //
+    private final long IN_TIME = 30 * 60 * 1000L; //30分钟
     private BaseThreadManager (){start();}
     private static class Holder {
         private static BaseThreadManager manager = new BaseThreadManager();
@@ -60,12 +61,12 @@ public class BaseThreadManager extends Thread{
             try {
                 thread = (BaseThread) ClazzUtil.newInstance(clazz,new Class[]{ActionCall.class},new Object[]{call});
                 runningMap.put(clazz,thread);
+                Say.I("执行>>\t"+ thread.getKeyString());
                 thread.reStart();
                 Thread.sleep(100);
             } catch (Exception e) {
-                Say.I(clazz+" 启动失败.");
+                Say.I(clazz +" 启动失败: "+ e.toString());
             }
-
         } finally {
             public_lock.unlock();
         }
